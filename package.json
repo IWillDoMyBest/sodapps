@@ -1,15 +1,27 @@
 {
-  "name": "main_server",
+  "name": "sodapps",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.4",
     "hbs": "^4.0.1"
-  }
+  },
+  "devDependencies": {
+    "npm-start-command": "^0.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PierreLeFevre/sodapps.git"
+  },
+  "bugs": {
+    "url": "https://github.com/PierreLeFevre/sodapps/issues"
+  },
+  "homepage": "https://github.com/PierreLeFevre/sodapps#readme"
 }
