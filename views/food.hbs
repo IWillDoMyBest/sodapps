@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-132676118-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-132676118-1');
+	</script>
+
+	<!--HEAD-->
+	<title>Mat</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="./js/jquery.touchSwipe.min.js"></script>
+
+	<!--METADATA-->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<META NAME="Title" CONTENT="SodMat">
+	<META NAME="Keywords" CONTENT="Skolmat, Södertörn, NTI, NTI-Gymnasiet, NTI-Gymnasiet Södertörn">
+	<META NAME="Description" CONTENT=" Mat Södertörn SodMat ...">
+	<META NAME="Subject" CONTENT="NTI Södertörn Skolmat">
+	<META NAME="Language" CONTENT="Swedish">
+
+
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#30673c">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#30673c">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#30673c">
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#30673c">
+	<meta name="msapplication-TileColor" content="#30673c">
+	<meta name="theme-color" content="#30673c">
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:100,300" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<link rel="stylesheet" type="text/css" href="./css/spinner.css">
+</head>
+<body>
+
+	<div class="wrapper">
+
+		<nav class="navbar">
+			<h1 class="header control" id="button-lastWeek" onclick="lastWeek();"><i class="fas fa-caret-left"></i>&nbsp;v.<span class="lastWeek number"></span></h1>
+			<h1 class="header" id="label-currentWeek">Meny v.<span class="selectedWeek number"></span></h1>
+			<h1 class="header control" id="button-nextWeek" onclick="nextWeek();">v.<span class="nextWeek number"></span>&nbsp;<i class="fas fa-caret-right"></i></h1>
+		</nav>
+
+		<div class="foodContainer">
+			<div class="foodScroller"></div>
+		</div>
+
+		<div class="loader-main">
+			
+			<div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+			<h1 class="header" id="loader-header">SodMat</h1>
+
+		</div>
+
+		<iframe id="schema" src="http://sodschema.ga"></iframe>
+
+	</div>
+
+	<script type="text/javascript" src="./js/index.js"></script>
+	<script type="text/javascript" src="./js/food.js"></script>
+
+</body>
+</html>

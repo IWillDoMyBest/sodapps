@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--HEAD-->
+	<title>School</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="./js/jquery.touchSwipe.min.js"></script>
+
+	<!--METADATA-->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<META NAME="Title" CONTENT="School">
+	<META NAME="Keywords" CONTENT="Skolmat, Södertörn, NTI, NTI-Gymnasiet, NTI-Gymnasiet Södertörn">
+	<META NAME="Description" CONTENT=" Mat Södertörn SodMat ...">
+	<META NAME="Subject" CONTENT="NTI Södertörn Skolmat">
+	<META NAME="Language" CONTENT="Swedish">
+
+
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#30673c">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#30673c">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#30673c">
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#30673c">
+	<meta name="msapplication-TileColor" content="#30673c">
+	<meta name="theme-color" content="#30673c">
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:100,300|Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="./index/css/style.css">
+	<link rel="stylesheet" type="text/css" href="./index/css/spinner.css">
+</head>
+<body>
+</body>
+	<div class="wrapper">
+		<h1 class="page-header">Välkommen, {{user.name}}!</h1>
+
+		<div class="card-container">
+			<section class="card" id="schedule">
+				<div class="card-header">
+					<p class="card-title">Nästa lektion</p>
+					<p class="card-link">Till schema&nbsp;<i class="material-icons">link</i></p>
+				</div>
+				<p class="card-text">Matematik 5, 14:30 i sal 2:2<br>Lektionen börjar om 5 minuter.</p>
+			</section>
+
+			<section class="card" id="food">
+				<div class="card-header">
+					<p class="card-title">Dagens lunch</p>
+					<p class="card-link">Till maten&nbsp;<i class="material-icons">link</i></p>
+				</div>
+				<p class="card-text">{{food.["6"]}}</p>
+			</section>
+
+			<section class="card" id="news">
+				<div class="card-header">
+					<p class="card-title">Nyheter{{bajs}}</p>
+					<p class="card-link">Till nyheterna&nbsp;<i class="material-icons">link</i></p>
+				</div>
+				<p class="card-text">Studentmössorna finns nu att hämta hos Birgitta.&nbsp;&nbsp;se mer&nbsp;<i class="material-icons">link</i>
+				<br><br>
+				Rapport brandlarm 27.01.2019 Ett larm sattes igång i sal 2.8 […]&nbsp;&nbsp;se mer&nbsp;<i class="material-icons">link</i>.</p>
+			</section>
+
+			<section class="card" id="settings">
+				<div class="card-header">
+					<p class="card-title">Inställningar</p>
+					<p class="card-link">Till din profil&nbsp;<i class="material-icons">link</i></p>
+				</div>
+			</section>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="./index/js/index.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,231 @@
+body{	
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
+	margin: 0;
+	font-family: "Roboto";
+	font-weight: 300;
+}
+
+*{
+	-webkit-tap-highlight-color: transparent;
+}
+
+h1, h2, h3, h4, h5, h6 { /*reset for mobile browsers */
+	font-weight: normal;
+}
+
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: lightgrey;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: white;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: white;
+}
+
+.wrapper{
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+
+.navbar{
+	height: 50px;
+	width: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	background: #33673E;
+	display: inline-block;
+	overflow: hidden;
+	z-index: 2000;
+}
+
+.header{
+	color: white;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	user-select: none;
+	font-size: 2rem;
+	margin: 0;
+}
+
+.number{
+	font-family: 'Roboto Mono', monospace;
+}
+
+#button-lastWeek{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#label-currentWeek{
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+#button-nextWeek{
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.control{
+	cursor: pointer;
+	/*background-color: #33673E;*/
+	background-color: white;
+	color: #33673E;
+	height: 100%;
+	padding: 0 1rem 0 1rem;
+}
+
+.foodContainer{
+	height: calc(100vh - 50px);
+	width: 100vw;
+	position: absolute;
+	left: 0;
+	top: 50px;
+	overflow-y: auto;
+}
+
+.foodScroller{
+	padding: 0;
+	padding-bottom: 50px;
+	display: flex;
+	align-content: center;
+	justify-content: space-around;
+	flex-direction: column;
+	overflow: hidden;
+	transition: transform .1s ease-in-out;
+}
+
+.day{
+	width: 100vw;
+	margin: 0;
+	padding: 1rem;
+	box-sizing: border-box;
+	position: relative;
+}
+
+.day-1, .day-3, .day-5{
+	background-color: #fff;
+}
+
+.day-2, .day-4{
+	background-color: #FAFAF5;
+}
+
+.day-header{
+	line-height: 2rem;
+	font-size: 1.5rem;
+}
+
+.day-date{
+	font-weight: 100;
+	font-size: 1rem;
+}
+
+.day-feedback a{
+	color: inherit;
+}
+
+.course{
+	line-height: 1.25rem;
+	font-size: 1rem;	
+}
+
+.course-normal{
+	font-weight: bold;
+	color: #333;
+}
+
+.course-vego, .course-extra{
+	color: #555;
+}
+
+.day-feedback .course-extra{
+	color: white !important;
+	opacity: 1 !important;
+}
+
+.today{
+	animation: giveColor .3s ease-in-out;
+	background-color: #33673E;
+	color: white;
+}
+
+.today .course-normal{
+	color: #fff;
+	opacity: 0.9;
+}
+
+.today .course-vego, .today .course-extra{
+	color: #fff;
+	opacity: 0.8;
+}
+
+@keyframes giveColor{
+	from{background-color: #fff;}
+	to{background-color: #33673E;}
+};
+
+.desktopSchema{
+	display: none;
+}
+
+#schema{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100vw;
+	border: 0;
+}
+
+.loader-main{
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100vw;
+	background-color: #33673E;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-direction: column;
+	z-index: 2000000;
+}
+
+
+
+@media only screen and (max-width: 400px) {
+	.header{
+		font-size: 1.75rem;
+	}
+}
+
+@media only screen and (min-width: 1000px) {
+
+	body{
+		background-size: cover;
+		background-position: center;
+	}
+
+	.foodContainer{
+		height: auto;
+		overflow-x: hidden;
+	}
+
+	.foodScroller{
+		flex-direction: row;
+		padding: 0;
+	}
+}
