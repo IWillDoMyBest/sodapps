@@ -55,7 +55,9 @@
 					<p class="card-title">Dagens lunch</p>
 					<p class="card-link">Till maten&nbsp;<i class="material-icons">link</i></p>
 				</div>
-				<p class="card-text">{{food.["6"]}}</p>
+				<p class="card-text">{{#each todaysFood}}
+					<span class="card-food-title">{{@key}}:</span> {{this}}<br>
+				{{/each}}</p>
 			</section>
 
 			<section class="card" id="news">

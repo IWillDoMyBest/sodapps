@@ -69,6 +69,10 @@ body{
 	transform: translateY(.35rem);
 }
 
+.card-food-title{
+	text-transform: capitalize;
+}
+
 @keyframes load{
 	0%{
 		transform: translateY(200%);
