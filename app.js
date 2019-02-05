@@ -4,7 +4,7 @@ const handlebars = require("handlebars");
 const fs = require("fs");
 
 var app = express();
-var port = 8080;
+var port = (process.env.PORT || 5000);
 var server = http.createServer(app);
 
 var valid_key = "bondhon";
