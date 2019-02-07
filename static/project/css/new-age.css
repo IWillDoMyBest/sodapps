@@ -179,6 +179,12 @@ header.masthead .device-container {
   margin-left: auto;
 }
 
+.screen-filler{
+  height: 200%;
+  width: 200%;
+  transform: scale(0.5) translate(-50%, -50%);
+}
+
 header.masthead .device-container .screen img {
   border-radius: 3px;
 }
