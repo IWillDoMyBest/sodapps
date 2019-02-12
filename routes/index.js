@@ -10,11 +10,9 @@ router.route("/")
 
 		var jsonFood = fs.readFileSync("food.json");
 		var food = JSON.parse(jsonFood);
-
 		var date = new Date();
-		var week = date.getWeek();
-		var day = date.getDay();
-		var todaysFood = food[week][day];
+
+		var todaysFood = food[date.getWeek()][date.getDay()];
 
 		return res.render("index.hbs", {
 			user: {
